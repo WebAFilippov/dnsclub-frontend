@@ -1,0 +1,9 @@
+@import "./variables";
+@import "./libs/fonts";
+@import "./libs/normalize";
+@import "./libs/mixins";
+
+
+body {
+  background: var(--background);
+}

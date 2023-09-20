@@ -1,0 +1,27 @@
+* {
+  --background: #fff;
+  --header-background: #4e4e4e;
+  --search-background: #686868;
+  --search-background_active: #fff;
+  --text-primary: #333333;
+  --text-input-placeholder: #fff;
+  --text-hover: #fc8507;
+  --text-header: #fff;
+  --chat-background: #fff;
+  --popoverBackground: #fff;
+  --popoverBackground-hover: #f7f7f7;
+}
+
+:root[data-theme="dark"] * {
+  --background: #282b31;
+  --header-background: #32353e;
+  --search-background: #282b31;
+  --search-background_active: #4b4e5a;
+  --text-primary: #b7b8bb;
+  --text-input-placeholder: #6f7278;
+  --text-hover: #fc8507;
+  --text-header: #b7b8bb;
+  --chat-background: #1e2125;
+  --popoverBackground: #282b31;
+  --popoverBackground-hover: #32353e;
+}

@@ -1,0 +1,35 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: var(--header-background);
+
+  .leftContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .headerLogo {
+      height: 26px;
+    }
+
+    .headerNav {
+      padding-left: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0 20px;
+    }
+  }
+  .rightContainer {
+    display: flex;
+    align-items: center;
+    gap: 0 32px;
+    margin-left: 40px;
+  }
+}

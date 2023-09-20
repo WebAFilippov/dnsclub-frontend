@@ -1,0 +1,17 @@
+.button {
+  &.primary {
+    background: blue;
+  }
+
+  &.secondary {
+    background: aqua;
+  }
+
+  &.outline {
+    background: darkgreen;
+  }
+
+  &.m {
+    padding: 10px;
+  }
+}

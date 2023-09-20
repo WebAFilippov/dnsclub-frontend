@@ -1,0 +1,10 @@
+
+
+.icon {
+  color: #b7b8bb;
+  transition: color .3s ease;
+
+  &:hover {
+    color: var(--text-hover);
+  }
+}

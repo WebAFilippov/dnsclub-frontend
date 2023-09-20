@@ -1,0 +1,17 @@
+.header {
+  height: 60px;
+  width: 100vw;
+}
+
+.main {
+  width: 956px;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 1200px) and (max-width: 1520px) {
+    margin: 0 auto 0 270px;
+  }
+}

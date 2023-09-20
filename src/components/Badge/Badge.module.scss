@@ -1,0 +1,22 @@
+.badge {
+  align-items: flex-start;
+  border-radius: 6px;
+  display: flex;
+  font-weight: 700;
+  gap: 8px;
+  justify-content: center;
+
+  &.s {
+    padding: 2px 4px;
+  }
+  &.m {
+    padding: 4px 6px;
+  }
+  &.l {
+    padding: 6px 8px;
+  }
+  &.xl {
+    padding: 8px 10px;
+  }
+}
+
