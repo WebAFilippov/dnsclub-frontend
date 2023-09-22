@@ -1,17 +1,51 @@
 .button {
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 4px;
+  border: none;
+  transition: all 0.3s ease;
+
+  &.stretched {
+    width: 100%;
+  }
+
   &.primary {
-    background: blue;
+    background: var(--background-button-primary);
+    color: var(--text-button-primary);
+
+    &:hover {
+      color: var(--text-hover);
+    }
   }
 
   &.secondary {
-    background: aqua;
+    background: #fc8507;
+    color: white;
   }
 
   &.outline {
     background: darkgreen;
+    color: var(--text-button);
+  }
+
+  &.s {
+    padding: 4px 10px;
+    font-size: 14px;
+    font-weight: bolder;
   }
 
   &.m {
-    padding: 10px;
+    padding: 6px 14px;
+    font-size: 16px;
+    font-weight: bolder;
+  }
+
+  &.l {
+    padding: 7px 18px;
+    font-size: 18px;
+    font-weight: bolder;
   }
 }

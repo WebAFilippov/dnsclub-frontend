@@ -5,7 +5,7 @@ import HeaderSearch from "../HeaderSearch";
 import ClubcoinsNav from "../ClubcoinsNav";
 import OnAirChat from "../OnAirChat";
 import ColorScheme from "../ColorScheme";
-import Button from "../Button";
+import CreatePost from "../CreatePost";
 
 const Header = () => {
   return (
@@ -19,7 +19,7 @@ const Header = () => {
         </ul>
       </div>
       <div className={s.rightContainer}>
-        <Button type="secondary" size="m" handlerClick={() => console.log("dsa")}>Кнопка</Button>
+        <CreatePost />
         <ColorScheme />
       </div>
     </header>

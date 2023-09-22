@@ -7,26 +7,28 @@ const cx = classNames.bind(s);
 
 type Props = {
   disabled?: boolean;
+  type?: "primary" | "secondary" | "outline";
+  size?: "s" | "m" | "l";
+  stretched?: boolean;
   handlerClick?: () => void;
-  type: "primary" | "secondary" | "outline";
-  size: "s" | "m" | "l";
 };
 
 const Button: FunctionComponent<PropsWithChildren<Props>> = ({
   children,
   disabled = false,
+  type = "primary",
+  size = "s",
+  stretched,
   handlerClick,
-  type,
-  size,
 }) => {
   return (
     <>
       <button
-        className={cx("button", type, size)}
+        className={cx("button", type, size, { stretched: stretched })}
         disabled={disabled}
         onClick={handlerClick}
       >
-        <span className={cx("buttonIn")}>{children}</span>
+        {children}
       </button>
     </>
   );

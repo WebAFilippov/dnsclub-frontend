@@ -1,5 +1,5 @@
 const HomoPage = () => {
-  return <>HomoPage</>;
+  return <div>HomoPage</div>;
 };
 
 export default HomoPage;

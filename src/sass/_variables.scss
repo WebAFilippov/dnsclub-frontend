@@ -10,6 +10,10 @@
   --chat-background: #fff;
   --popoverBackground: #fff;
   --popoverBackground-hover: #f7f7f7;
+  --text-button-primary: #fff;
+  --background-button-primary: #686868;
+  --text-button-secondary: white;
+  --modal-background_hover: #f7f7f7;
 }
 
 :root[data-theme="dark"] * {
@@ -24,4 +28,8 @@
   --chat-background: #1e2125;
   --popoverBackground: #282b31;
   --popoverBackground-hover: #32353e;
+  --text-button-primary: #b7b8bb;
+  --background-button-primary: #282b31;
+  --text-button-secondary: #000;
+  --modal-background_hover: #32353e;
 }

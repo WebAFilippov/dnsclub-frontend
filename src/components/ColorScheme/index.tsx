@@ -4,7 +4,7 @@ import { useState } from "react";
 import styles from "./ColorScheme.module.scss";
 import useColorTheme, { Theme } from "./../../hooks/useColorTheme";
 import ThemeIcon from "../Icons/ThemeIcon";
-import PopoverItem from "../PopoverItem/index.tsx";
+import PopoverItemColorSchema from "../PopoverItemColorSchema/index.tsx";
 import Badge from "../Badge";
 
 function ColorScheme() {
@@ -32,20 +32,20 @@ function ColorScheme() {
         <Popover.Content
           className={styles.popoverContent}
           sideOffset={16}
-          collisionPadding={5}
+          collisionPadding={5}          
         >
-          <PopoverItem type="system" handler={handlerItem} focus={colorTheme}>
+          <PopoverItemColorSchema type="system" handlerClick={handlerItem} focus={colorTheme}>
             <ThemeIcon type="system" size={24} />
             Как на устройстве
-          </PopoverItem>
-          <PopoverItem type="light" handler={handlerItem} focus={colorTheme}>
+          </PopoverItemColorSchema>
+          <PopoverItemColorSchema type="light" handlerClick={handlerItem} focus={colorTheme}>
             <ThemeIcon type="light" size={24} />
             Светлая
-          </PopoverItem>
-          <PopoverItem type="dark" handler={handlerItem} focus={colorTheme}>
+          </PopoverItemColorSchema>
+          <PopoverItemColorSchema type="dark" handlerClick={handlerItem} focus={colorTheme}>
             <ThemeIcon type="dark" size={24} />
             Темная
-          </PopoverItem>
+          </PopoverItemColorSchema>
         </Popover.Content>
       </Popover.Portal>
     </Popover.Root>

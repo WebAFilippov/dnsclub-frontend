@@ -1,27 +1,40 @@
-import { Theme } from "../../hooks/useColorTheme";
-import styles from "./PopoverItem.module.scss";
-import classNames from "classnames/bind";
+import { ReactNode } from "react";
+import classNames from "classnames/bind"
 
-const cx = classNames.bind(styles);
+import s from "./PopoverItem.module.scss";
 
-interface IProps {
-  children: React.ReactNode,
-  handler: (type: Theme) => void,
-  type: Theme, 
-  focus: Theme
-}
+import PopoverItemTitle from "./shared/PopoverItemTitle";
+import PopoverItemDescription from "./shared/PopoverItemDescription";
+import PopoverItemContent from "./shared/PopoverItemContent";
 
-function PopoverItem({ children, handler, type, focus }: IProps) {
+const cx = classNames.bind(s)
+
+type PopoverItemExtensions = {
+  Title: typeof PopoverItemTitle;
+  Description: typeof PopoverItemDescription;
+  Content: typeof PopoverItemContent;
+};
+
+type PopoverItemProps = {
+  children: ReactNode;
+  onClick?: () => void;
+  className?: string;
+};
+
+const PopoverItem: React.FC<PopoverItemProps> & PopoverItemExtensions = ({
+  children,
+  onClick,
+  className,
+}) => {
   return (
-    <div
-      className={cx(styles.contentContainer, { focus: focus === type })}
-      onClick={() => {
-        handler(type);
-      }}
-    >
+    <div onClick={onClick} className={className ? className : cx('popover_item')}>
       {children}
     </div>
   );
-}
+};
+
+PopoverItem.Title = PopoverItemTitle;
+PopoverItem.Description = PopoverItemDescription;
+PopoverItem.Content = PopoverItemContent;
 
 export default PopoverItem;

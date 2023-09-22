@@ -1,0 +1,42 @@
+.contentContainer {
+  user-select: none;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  & svg {
+    transition: fill 0.2s ease;
+  }
+
+  &:hover {
+    background: var(--popoverBackground-hover);
+    color: var(--text-hover);
+  }
+
+  &:hover svg {
+    fill: var(--text-hover);
+  }
+
+  &:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  &.focus {
+    background: var(--popoverBackground-hover);
+  }
+}

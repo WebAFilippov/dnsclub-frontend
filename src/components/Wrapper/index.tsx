@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 import s from "./Wrapper.module.scss";
 import Header from "../Header";
-import Sidebar from "../Sidebar";
+import Sidebar from "./Sidebar";
 import Chat from "../Chat";
 
 const Wrapper = () => {
