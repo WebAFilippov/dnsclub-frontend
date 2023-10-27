@@ -31,5 +31,9 @@
     align-items: center;
     gap: 0 32px;
     margin-left: 40px;
+
+    div:focus {
+      border: white 1px solid;
+    }
   }
 }

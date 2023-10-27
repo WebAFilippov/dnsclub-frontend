@@ -4,6 +4,7 @@ import styles from "./HeaderLogo.module.scss";
 
 function HeaderLogo() {
   const navigate = useNavigate();
+  
   return (
     <>
       <img

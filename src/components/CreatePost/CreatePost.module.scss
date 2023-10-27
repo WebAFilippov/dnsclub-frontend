@@ -50,3 +50,10 @@
   }
 }
 
+.arrow {
+  transition: transform 0.25s;
+
+  &.open {
+    transform: rotate(-180deg);
+  }
+}

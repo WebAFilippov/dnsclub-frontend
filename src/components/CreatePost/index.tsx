@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import classNames from "classnames/bind";
 import { PiPencilLight } from "react-icons/pi";
 import { LuMessagesSquare } from "react-icons/lu";
+import { GoTriangleDown } from "react-icons/go";
 
 import s from "./CreatePost.module.scss";
 
@@ -26,7 +27,7 @@ const CreatePost: React.FC = () => {
         <Popover.Trigger asChild>
           <div className={s.triggerContainer}>
             <Button type="secondary" size="m">
-              Создать
+              Создать<GoTriangleDown className={cx('arrow', {"open": open})} />
             </Button>
           </div>
         </Popover.Trigger>
@@ -37,34 +38,36 @@ const CreatePost: React.FC = () => {
             align="end"
             className={s.popoverContent}
           >
-            <PopoverItem
-              onClick={() => {
-                navigate("/post/create");
-                setOpen(false);
-              }}
-            >
-              <PopoverItem.Title>
-                <PiPencilLight />
-                Статья
-              </PopoverItem.Title>
-              <PopoverItem.Description>
-                Полезный для читателей контент
-              </PopoverItem.Description>
-            </PopoverItem>
-            <PopoverItem
-              onClick={() => {
-                navigate("/discussions/create");
-                setOpen(false);
-              }}
-            >
-              <PopoverItem.Title>
-                <LuMessagesSquare />
-                Тема
-              </PopoverItem.Title>
-              <PopoverItem.Description>
-                Обсуждение товара
-              </PopoverItem.Description>
-            </PopoverItem>
+            <div>
+              <PopoverItem
+                onClick={() => {
+                  navigate("/post/create");
+                  setOpen(false);
+                }}
+              >
+                <PopoverItem.Title>
+                  <PiPencilLight />
+                  Статья
+                </PopoverItem.Title>
+                <PopoverItem.Description>
+                  Полезный для читателей контент
+                </PopoverItem.Description>
+              </PopoverItem>
+              <PopoverItem
+                onClick={() => {
+                  navigate("/discussions/create");
+                  setOpen(false);
+                }}
+              >
+                <PopoverItem.Title>
+                  <LuMessagesSquare />
+                  Тема
+                </PopoverItem.Title>
+                <PopoverItem.Description>
+                  Обсуждение товара
+                </PopoverItem.Description>
+              </PopoverItem>
+            </div>
           </Popover.Content>
         </Popover.Portal>
       </Popover.Root>

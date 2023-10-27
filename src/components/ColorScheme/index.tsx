@@ -32,17 +32,29 @@ function ColorScheme() {
         <Popover.Content
           className={styles.popoverContent}
           sideOffset={16}
-          collisionPadding={5}          
+          collisionPadding={5}
         >
-          <PopoverItemColorSchema type="system" handlerClick={handlerItem} focus={colorTheme}>
+          <PopoverItemColorSchema
+            type="system"
+            handlerClick={handlerItem}
+            focus={colorTheme}
+          >
             <ThemeIcon type="system" size={24} />
             Как на устройстве
           </PopoverItemColorSchema>
-          <PopoverItemColorSchema type="light" handlerClick={handlerItem} focus={colorTheme}>
+          <PopoverItemColorSchema
+            type="light"
+            handlerClick={handlerItem}
+            focus={colorTheme}
+          >
             <ThemeIcon type="light" size={24} />
             Светлая
           </PopoverItemColorSchema>
-          <PopoverItemColorSchema type="dark" handlerClick={handlerItem} focus={colorTheme}>
+          <PopoverItemColorSchema
+            type="dark"
+            handlerClick={handlerItem}
+            focus={colorTheme}
+          >
             <ThemeIcon type="dark" size={24} />
             Темная
           </PopoverItemColorSchema>

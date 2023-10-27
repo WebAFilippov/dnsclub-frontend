@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { useLocalStorage } from "usehooks-ts";
+import { useLocalStorage } from 'usehooks-ts';
 
 export type Theme = "system" | "light" | "dark"
 
 export default function useColorTheme() {
-  const [colorTheme, setColorTheme] = useLocalStorage<Theme>("colorTheme", "system");
+  const [colorTheme, setColorTheme] = useLocalStorage<Theme>("mode_theme", "system");
 
   useEffect(() => {
     if (colorTheme === "system") {
