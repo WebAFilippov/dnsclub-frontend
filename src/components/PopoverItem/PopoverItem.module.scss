@@ -8,6 +8,7 @@
   color: var(--text-primary);  
 
   &:focus {
+    background: red;
     border: 1px solid white;
   }
 

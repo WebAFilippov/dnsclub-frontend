@@ -5,7 +5,10 @@ import HeaderSearch from "../HeaderSearch";
 import ClubcoinsNav from "../ClubcoinsNav";
 import OnAirChat from "../OnAirChat";
 import ColorScheme from "../ColorScheme";
-import CreatePost from "../CreatePost";
+import CreateBtn from "../Buttons/CreateBtn";
+import AuthHeaderBtn from "../AuthHeader";
+import { type } from './../../hooks/useOpenChat';
+import Button from "../Button";
 
 const Header = () => {
   return (
@@ -19,8 +22,9 @@ const Header = () => {
         </ul>
       </div>
       <div className={s.rightContainer}>
-        <CreatePost />
+        <CreateBtn />
         <ColorScheme />
+        <AuthHeaderBtn/>
       </div>
     </header>
   );

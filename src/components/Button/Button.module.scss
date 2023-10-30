@@ -31,6 +31,17 @@
     color: var(--text-button);
   }
 
+  &.auth {
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }  
+
   &.s {
     padding: 4px 10px;
     font-size: 14px;
@@ -47,5 +58,9 @@
     padding: 7px 18px;
     font-size: 18px;
     font-weight: bolder;
+  }
+
+  &:focus {
+    box-shadow: 0 0 5px 1px white;
   }
 }

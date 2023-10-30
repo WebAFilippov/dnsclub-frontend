@@ -6,14 +6,14 @@ import { PiPencilLight } from "react-icons/pi";
 import { LuMessagesSquare } from "react-icons/lu";
 import { GoTriangleDown } from "react-icons/go";
 
-import s from "./CreatePost.module.scss";
+import s from "./CreateBtn.module.scss";
 
-import Button from "../Button";
-import PopoverItem from "../PopoverItem";
+import Button from "../../Button";
+import PopoverItem from "../../PopoverItem";
 
 const cx = classNames.bind(s);
 
-const CreatePost: React.FC = () => {
+const CreateBtn: React.FC = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
@@ -26,7 +26,7 @@ const CreatePost: React.FC = () => {
       <Popover.Root defaultOpen={open} open={open} onOpenChange={handlerToggle}>
         <Popover.Trigger asChild>
           <div className={s.triggerContainer}>
-            <Button type="secondary" size="m">
+            <Button type="secondary" sizes="m">
               Создать<GoTriangleDown className={cx('arrow', {"open": open})} />
             </Button>
           </div>
@@ -75,4 +75,4 @@ const CreatePost: React.FC = () => {
   );
 };
 
-export default CreatePost;
+export default CreateBtn;
